@@ -34,7 +34,7 @@ class Fuente():
     def set_mode(self):
         """ Carga el modo fijado a la fuente """
 
-        self.p.setData(2 * self.current + self.type_measure)
+        self.p.setData(2 * self.type_measure + self.current)
 
     def invert_current(self):
         """ Cambia le sentido de circulacion de la corriente """

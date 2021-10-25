@@ -4,7 +4,7 @@ que varia la temperatura de la muestra.
 
 Requerimientos:
 - Es necesario setear la rampa de temperaturas a mano en el Neocera.
-- Es necesario setear la escala de medicion a mano en el Nanovolt.
+- Es necesario setear la escala de medicion a mano en el Agilent.
 - Es necesario tener prendida la fuente y seteada con la corriente deseada.
 
 La rutina a seguida es:
@@ -27,18 +27,18 @@ from datetime import datetime
 
 # Importamos instrumentos
 from instrumentos.fuente import Fuente
-from instrumentos.Nanovolt import Nanovolt
+from instrumentos.Agilent import Agilent_34420A
 from instrumentos.Neocera import TC_Neocera_TCL111
 
 # Los IDs de los equipos pueden varias si se cambian, para buscar los
 # IDs de los equipos que estan conectados ver test_GPIB.py
-ID_Neocera = "GPIB::10::INSTR"
-ID_Nanovolt = "GPIB::22::INSTR"
+ID_Neocera = "GPIB0::10::INSTR"
+ID_Agilent = "GPIB0::22::INSTR"
 
 # Inicializamos los instrumentos
 fuente = Fuente()
 neocera = TC_Neocera_TCL111(ID_Neocera)
-nanovolt = Nanovolt(ID_Nanovolt)
+agilent = Agilent_34420A(ID_Agilent)
 
 # Creamos el archivo donde guardaremos los datos.
 file = open(
@@ -80,26 +80,26 @@ while True:
     fuente.set_type_measure("V")
     fuente.set_mode()
     
-    V1 = nanovolt.get_voltage()
+    V1 = agilent.get_voltage()
 
     fuente.invert_current()
     fuente.set_mode()
     time.sleep(0.2)
 
-    V2 = nanovolt.get_voltage()
+    V2 = agilent.get_voltage()
 
     fuente.set_type_measure("T")
     fuente.invert_current()
     fuente.set_mode()
     time.sleep(0.2)
 
-    T1 = nanovolt.get_voltage()
+    T1 = agilent.get_voltage()
 
     fuente.invert_current()
     fuente.set_mode()
     time.sleep(0.2)
 
-    T2 = nanovolt.get_voltage()
+    T2 = agilent.get_voltage()
 
     file.write(
         str(t - t0) + " " + str(T) + " " + str(V1) + " " + str(V2) +
