@@ -7,6 +7,8 @@ except:
 GPIB es un protocolo de comunicacion entre los equipos. 
 Se hace una clase general para agregar funcionalidades que son generales
 a todos los equipos con este protocolo como el Neocera y el Agilent.
+
+Para un ejemplo de uso ver test_GPIB.py
 """
 
 class GPIB():

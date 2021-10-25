@@ -25,10 +25,10 @@ import matplotlib.pyplot as plt
 import time
 from datetime import datetime
 
-# Importamos instrumentos
+# Importamos los instrumentos
 from instrumentos.fuente import Fuente
 from instrumentos.Agilent import Agilent_34420A
-from instrumentos.Neocera import TC_Neocera_TCL111
+from instrumentos.Neocera import Neocera_LTC21
 
 # Los IDs de los equipos pueden varias si se cambian, para buscar los
 # IDs de los equipos que estan conectados ver test_GPIB.py
@@ -37,7 +37,7 @@ ID_Agilent = "GPIB0::22::INSTR"
 
 # Inicializamos los instrumentos
 fuente = Fuente()
-neocera = TC_Neocera_TCL111(ID_Neocera)
+neocera = Neocera_LTC21(ID_Neocera)
 agilent = Agilent_34420A(ID_Agilent)
 
 # Creamos el archivo donde guardaremos los datos.
