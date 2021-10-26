@@ -2,13 +2,12 @@
 
 # Agregamos el directorio general a los paths para poder importar GPIB
 import sys
-sys.path.append(".")  
+sys.path.append(".")
 
 try:
     import visa
-except:
+except Exception:
     import pyvisa as visa
-
 
 from instrumentos.GPIB import GPIB
 
@@ -22,7 +21,7 @@ instrument = None
 while not instrument:
     try:
         instrument = GPIB(ID)
-    except:
+    except Exception:
         ID = input("No se encontro el equipo, ingrese otro ID: ")
 
 instrument.test_connectivity()

@@ -11,6 +11,6 @@ Los comandos de comunicacion con el Agilent se pueden encontrar en su manual.
 """
 
 class Agilent_34420A(GPIB):
-    
+
     def get_voltage(self):
         return float(self.instrument.query('READ?;'))

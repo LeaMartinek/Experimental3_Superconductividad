@@ -2,7 +2,7 @@
 
 # Agregamos el directorio general a los paths para poder importar GPIB
 import sys
-sys.path.append(".")  
+sys.path.append(".")
 
 import time
 from instrumentos.fuente import Fuente

@@ -12,7 +12,7 @@ Los comandos de comunicacion con el Neocera se pueden encontrar en su manual.
 """
 
 class Neocera_LTC11(GPIB):
-    
+
     def get_temperature(self):
         fetch = self.instrument.query('QSAMP?1;')
         return float(fetch[0:-3])

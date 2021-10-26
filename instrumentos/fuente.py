@@ -21,14 +21,14 @@ class Fuente():
         self.p = parallel.Parallel()  # open LPT1 or /dev/parport0
 
         ### Hay que probar que pasa si se usa esto ### 
-        #envia el byte en hexa con los puestos 2-9
+        # envia el byte en hexa con los puestos 2-9
         # 0xff prende todos
         # 0x00 apaga todos
         # dan voltaje de 0.5 cuando estan apagados y 3.4 prendidos
-        #self.p.setData(0x00)
+        # self.p.setData(0x00)
 
-        self.current = current # 0 -> corriente negativa; 1 -> corriente positiva; 
-        self.type_measure = type_measure # 0 -> Bornes V; 1 -> Bornes T
+        self.current = current  # 0 -> corriente negativa; 1 -> corriente positiva; 
+        self.type_measure = type_measure  # 0 -> Bornes V; 1 -> Bornes T
         self.set_mode()
 
     def set_mode(self):

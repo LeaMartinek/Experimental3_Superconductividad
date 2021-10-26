@@ -19,7 +19,7 @@ class GPIB():
 
     def __connect_instrument(self, ID):
         rm = visa.ResourceManager()
-        if not ID in rm.list_resources(): # Chequear como devuelve la lista con los IDs
+        if ID not in rm.list_resources():
             raise Exception("No se encontro el ID del equipo")
 
         self.instrument = rm.open_resource(ID)
@@ -29,10 +29,9 @@ class GPIB():
     def test_connectivity(self):
         ID = self.instrument.query("*IDN?;")
         print("Conectado a " + ID)
-            
+
     def print_ID(self, connect=True):
         if connect:
             print(self.instrument.query("*IDN?;"))
         else:
             print(self.id)
-    
