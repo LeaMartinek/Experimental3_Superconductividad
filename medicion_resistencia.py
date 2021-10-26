@@ -28,7 +28,7 @@ from datetime import datetime
 # Importamos los instrumentos
 from instrumentos.fuente import Fuente
 from instrumentos.Agilent import Agilent_34420A
-from instrumentos.Neocera import Neocera_LTC21
+from instrumentos.Neocera import Neocera_LTC11
 
 # Los IDs de los equipos pueden varias si se cambian, para buscar los
 # IDs de los equipos que estan conectados ver test_GPIB.py
@@ -37,12 +37,16 @@ ID_Agilent = "GPIB0::22::INSTR"
 
 # Inicializamos los instrumentos
 fuente = Fuente()
-neocera = Neocera_LTC21(ID_Neocera)
+neocera = Neocera_LTC11(ID_Neocera)
 agilent = Agilent_34420A(ID_Agilent)
+
+# Directorio donde se quiere guardar el archivo
+file_path = "C:\\Users\\adminib\\Desktop\\Superconductividad Segovia y Martinek"
 
 # Creamos el archivo donde guardaremos los datos.
 file = open(
-    "rutina1_" + datetime.today().strftime('%Y%m%d_%H_%M_%S') + ".txt",
+    file_path + "\\"+ 
+    "medicion_" + datetime.today().strftime('%Y%m%d_%H_%M_%S') + ".txt",
     'a'
 )
 file.write("Tiempo Temperatura V1 V2 T1 T2\n")  # Cabecera del archivo

@@ -2,7 +2,7 @@
 from instrumentos.GPIB import GPIB
 
 """
-Clase con funcionalidades para el control del Neocera LTC21.
+Clase con funcionalidades para el control del Neocera LTC11.
 
 Comandos de comunicacion con el Neocera:
     - "QSAMP?1;" : Devuelve el valor medido para la temperatura como un string
@@ -11,7 +11,7 @@ Comandos de comunicacion con el Neocera:
 Los comandos de comunicacion con el Neocera se pueden encontrar en su manual.
 """
 
-class Neocera_LTC21(GPIB):
+class Neocera_LTC11(GPIB):
     
     def get_temperature(self):
         fetch = self.instrument.query('QSAMP?1;')
