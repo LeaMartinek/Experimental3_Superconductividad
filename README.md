@@ -13,7 +13,7 @@ un commit a este repositorio y eventualmente sera agregado a la rama principal.
 
 Colaboradores:
 
-- Matias Martiñan: 
+- Matias Mantiñan: mantinanmatias@gmail.com 
 
 - Leandro Martinek: leandro.martinek@gmail.com
 
