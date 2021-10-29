@@ -106,8 +106,9 @@ while True:
     T2 = agilent.get_voltage()
 
     file.write(
-        str(t - t0) + " " + str(T) + " " + str(V1) + " " + str(V2) +
-        str(T1) + str(T2) + "\n"
+        str(t - t0) + " " + str(T) + " " +
+        str(V1) + " " + str(V2) + " " +
+        str(T1) + " " + str(T2) + "\n"
     )
 
     axTc.plot(t - t0, T, "r*")  # Grafico de temperatura
