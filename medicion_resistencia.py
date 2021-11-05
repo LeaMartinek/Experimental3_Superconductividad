@@ -112,7 +112,7 @@ while True:
     )
 
     axTc.plot(t - t0, T, "r*")  # Grafico de temperatura
-    axNv.plot(t - t0, (V1 - V2) / 2, "b.")  # Grafico de tension en bornes V
-    axNv.plot(t - t0, (T1 - T2) / 2, "go")  # Grafico de tension en bornes T
+    axNv.plot(t - t0, abs(V1 - V2) / 2, "b.")  # Grafico de tension en bornes V
+    axNv.plot(t - t0, abs(T1 - T2) / 2, "go")  # Grafico de tension en bornes T
 
     plt.pause(0.1)  # Muestra los datos y espera 0.1 segundos
