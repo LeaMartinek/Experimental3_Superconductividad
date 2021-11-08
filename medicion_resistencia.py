@@ -105,6 +105,10 @@ while True:
 
     T2 = agilent.get_voltage()
 
+    fuente.invert_current()
+    fuente.set_mode()
+    time.sleep(0.2)
+
     file.write(
         str(t - t0) + " " + str(T) + " " +
         str(V1) + " " + str(V2) + " " +
@@ -113,6 +117,6 @@ while True:
 
     axTc.plot(t - t0, T, "r*")  # Grafico de temperatura
     axNv.plot(t - t0, abs(V1 - V2) / 2, "b.")  # Grafico de tension en bornes V
-    axNv.plot(t - t0, abs(T1 - T2) / 2, "go")  # Grafico de tension en bornes T
+    axNt.plot(t - t0, abs(T1 - T2) / 2, "go")  # Grafico de tension en bornes T
 
     plt.pause(0.1)  # Muestra los datos y espera 0.1 segundos
