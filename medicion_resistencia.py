@@ -41,7 +41,7 @@ neocera = Neocera_LTC11(ID_Neocera)
 agilent = Agilent_34420A(ID_Agilent)
 
 # Directorio donde se quiere guardar el archivo
-file_path = "C:\\Users\\adminib\\Desktop\\Superconductividad Segovia y Martinek"
+file_path = "C:\\Users\\adminib\\Desktop\\Superconductividad Segovia y Martinek\\medicion_20-11_segunda"
 
 # Creamos el archivo donde guardaremos los datos.
 file = open(
