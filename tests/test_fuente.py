@@ -1,4 +1,4 @@
-# Ejecutar desde el directorio general con python /test/test_fuente.py
+# Ejecutar desde el directorio general con 'python /test/test_fuente.py'
 
 # Agregamos el directorio general a los paths para poder importar GPIB
 import sys

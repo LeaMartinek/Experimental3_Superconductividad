@@ -1,0 +1,11 @@
+1 - Se puede configurar la rampa de subida, de bajada y también el set point
+en el Neocera a través de la comunicación GPIB.
+Con esto se podría lograr que las mediciones tomen menos tiempo ya
+que se podría hacer que baje más rápido en la zona de temperaturas altas
+y más lento en la de temperaturas bajas. También configurando los set points
+se puede hacer una bajada y subida directamente, sin necesidad de que
+intervenga el usuario.
+Matias Mantiñan había hecho unos intentos, pero tuvo problemas. Estos intentos
+se encuentran en la carpeta de 'Scripts originales'.
+Los comandos para configurar esto se encuentran en el manual del Neocera.
+(Leandro Martinek 9/12/2021)
