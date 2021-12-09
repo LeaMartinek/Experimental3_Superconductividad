@@ -1,3 +1,9 @@
+"""
+Programa utilizado para observar las mediciones de voltajes directamente
+en la terminal. Esto nos permitia hacer cambios sobre la muestra o la corriente
+y observar directamente el cambio en los voltajes medidos.
+"""
+
 import time
 
 # Importamos instrumentos
